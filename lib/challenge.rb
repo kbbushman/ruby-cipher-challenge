@@ -34,7 +34,7 @@ end
 
 def decode(string, rot=13)
   string.downcase!
-  values = $alphabet.chars.rotate(rot) # or rotate(13)
+  values = $alphabet.chars.rotate(-rot) # or rotate(13)
   pairs = $keys.zip(values)
   cipher = Hash[pairs]
 
