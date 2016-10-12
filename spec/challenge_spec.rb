@@ -38,8 +38,8 @@ RSpec.describe 'Challenge: ' do
       end
       it 'can decode at an arbitrary rotation (ROT-N)' do
         expect(decode('nop qrs', 13)).to eq('abc def')
-        expect(decode('def ghi', 3)).to eq('abc def')
-        expect(decode('bcd efg', 1)).to eq('abc def')
+        expect(decode('abc def', 3)).to eq('def ghi')
+        expect(decode('abc def', 1)).to eq('bcd efg')
       end
     end
   end
