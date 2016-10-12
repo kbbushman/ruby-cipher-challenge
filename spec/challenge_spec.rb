@@ -37,9 +37,9 @@ RSpec.describe 'Challenge: ' do
         expect(decode('gur dhvpx oebja sbk whzcrq bire gur ynml qbt')).to eq('the quick brown fox jumped over the lazy dog')
       end
       it 'can decode at an arbitrary rotation (ROT-N)' do
-        expect(decode('nop qrs', 13)).to eq('abc def')
-        expect(decode('abc def', 3)).to eq('def ghi')
-        expect(decode('abc def', 1)).to eq('bcd efg')
+        expect(decode('abc def', 13)).to eq('nop qrs')
+        expect(decode('def ghi', 3)).to eq('abc def')
+        expect(decode('bcd efg', 1)).to eq('abc def')
       end
     end
   end
